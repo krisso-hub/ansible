@@ -34,6 +34,12 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_YAML: true
+          VALIDATE_BASH: true
+          VALIDATE_PYTHON: true
+          VALIDATE_TERRAFORM_TFLINT: true
+          VALIDATE_TERRAFORM_TERRASCAN: true
           GITHUB_TOKEN: ${{github.token}}
           working-directory: ${{env.working-directory}}
         
