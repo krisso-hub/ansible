@@ -34,4 +34,8 @@ jobs:
         run: cd playbooks
       - name: Lint Code Base
         uses: github/super-linter@v4
+        env:
+          GITHUB_TOKEN: ${{github.token}}
+        
+        
         
